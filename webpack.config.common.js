@@ -3,6 +3,7 @@ const path = require('path');
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const FileIncludeWebpackPlugin = require('file-include-webpack-plugin');
 
 const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map(
   dir => new HTMLWebpackPlugin({
@@ -54,6 +55,12 @@ module.exports = {
     ],
   },
   plugins: [
+    new FileIncludeWebpackPlugin(
+        {
+          source: './src',
+          destination: '../dist',
+        },
+    ),
     new CopyWebpackPlugin([
       {
         from: './src/static/',

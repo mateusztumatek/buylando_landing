@@ -1,0 +1,19 @@
+$primary-font: 'Source Sans Pro', sans-serif;
+$btn-border-radius: 30px;
+$black-color: #333333;
+$btn-padding-y: 12px;
+$btn-padding-x: 35px;
+$primary-color: #00b9ff;
+$secondary-color: #6633cc;
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1200px
+) !default;
+
+@mixin myShadow{
+  -webkit-box-shadow: 4px 4px 16px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 4px 4px 16px 0px rgba(0,0,0,0.25);
+  box-shadow: 4px 4px 16px 0px rgba(0,0,0,0.25);
+}
